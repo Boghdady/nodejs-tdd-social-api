@@ -6,7 +6,8 @@
   "scripts": {
     "start:dev": "nodemon app.js",
     "start:prod": "node app.js",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "lint": "eslint ."
   },
   "author": "Ahmed Boghdady",
   "license": "ISC",
@@ -15,16 +16,23 @@
   },
   "devDependencies": {
     "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "jest": "^28.1.2",
     "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
     "supertest": "^6.2.4"
   },
   "eslintConfig": {
     "parserOptions": {
-      "ecmaVersion": 6
+      "ecmaVersion": 2018
     },
-    "extends":[
-      "eslint:recommended"
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "prettier"
     ],
     "env": {
       "node": true,
@@ -32,8 +40,12 @@
       "jest": true
     },
     "rules": {
-      "semi":"warn",
-      "quotes":["warn", "single"]
+      "eqeqeq": "warn",
+      "prettier/prettier": 0
     }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120
   }
 }
