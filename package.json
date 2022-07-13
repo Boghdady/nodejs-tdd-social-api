@@ -4,8 +4,36 @@
   "description": "nodejs webservice that built using tdd concept",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "nodemon app.js",
+    "start:prod": "node app.js",
+    "test": "jest --watch"
   },
   "author": "Ahmed Boghdady",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "jest": "^28.1.2",
+    "nodemon": "^2.0.19",
+    "supertest": "^6.2.4"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "extends":[
+      "eslint:recommended"
+    ],
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "rules": {
+      "semi":"warn",
+      "quotes":["warn", "single"]
+    }
+  }
 }
