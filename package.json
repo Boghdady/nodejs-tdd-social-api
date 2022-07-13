@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-tdd-social-api",
+  "version": "1.0.0",
+  "description": "nodejs webservice that built using tdd concept",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmed Boghdady",
+  "license": "ISC"
+}
