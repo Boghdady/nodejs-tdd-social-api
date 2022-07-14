@@ -4,8 +4,8 @@
   "description": "nodejs webservice that built using tdd concept",
   "main": "app.js",
   "scripts": {
-    "start:dev": "nodemon app.js",
-    "start:prod": "node app.js",
+    "start:dev": "nodemon server.js",
+    "start:prod": "node server.js",
     "test": "jest --watch",
     "lint": "eslint ."
   },
@@ -25,7 +25,9 @@
   },
   "eslintConfig": {
     "parserOptions": {
-      "ecmaVersion": 2018
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "allowImportExportEverywhere": true
     },
     "extends": [
       "eslint:recommended",
