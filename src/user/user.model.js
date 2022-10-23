@@ -3,9 +3,9 @@ const sequelize = require('../config/database');
 
 const Model = Sequelize.Model;
 
-class User extends Model {}
+class UserModel extends Model {}
 
-User.init(
+UserModel.init(
   {
     username: {
       type: Sequelize.STRING,
@@ -23,4 +23,4 @@ User.init(
   }
 );
 
-module.exports = User;
+module.exports = UserModel;
